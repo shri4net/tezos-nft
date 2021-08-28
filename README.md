@@ -11,7 +11,7 @@ We envision to build an NFT and DAO ecosystem targeted towards Nature photograph
 The white paper enclosed has details of the vision and roadmap. The current codebase however only implements the minting and setup of the NFT contracts for simple fixed price sale. Further workflow related to Curation and DAO are still in the works.
 
 ### Demo site link
-https://apps4demo.com/
+https://apps4demo.com/cryptobutterflies
 (under active development)
 
 ### UI Screen-shots
