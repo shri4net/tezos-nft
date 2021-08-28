@@ -69,6 +69,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "/cryptobutterflies",
   "eslintConfig": {
     "extends": "react-app"
   },

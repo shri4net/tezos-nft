@@ -30,7 +30,7 @@ export default function TokenCard(props: TokenCardProps) {
         boxShadow: '0px 0px 10px #3339',
       }}
       onClick={() =>
-        setLocation(`/collection/${props.address}/token/${props.id}`)
+        setLocation(`/cryptobutterflies/collection/${props.address}/token/${props.id}`)
       }
     >
       <AspectRatio ratio={3 / 2}>

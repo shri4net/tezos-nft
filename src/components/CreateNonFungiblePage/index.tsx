@@ -119,7 +119,7 @@ export default function CreateNonFungiblePage() {
               variant="cancelAction"
               onClick={() => {
                 dispatch(clearForm());
-                setLocation('/collections');
+                setLocation('/cryptobutterflies/collections');
               }}
               display="flex"
               alignItems="center"
@@ -176,7 +176,7 @@ export default function CreateNonFungiblePage() {
               method="mintToken"
               dispatchThunk={() => dispatch(mintTokenAction())}
               onComplete={() => dispatch(clearForm())}
-              afterClose={() => setLocation('/collections')}
+              afterClose={() => setLocation('/cryptobutterflies/collections')}
               dispatchOnOpen={true}
               pendingAsyncMessage={
                 <>

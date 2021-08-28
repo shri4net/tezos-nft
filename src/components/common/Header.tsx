@@ -148,7 +148,7 @@ function WalletDisplay() {
                 variant="cancelAction"
                 onClick={async () => {
                   await dispatch(disconnectWallet());
-                  setLocation('/');
+                  setLocation('/cryptobutterflies');
                 }}
               >
                 Disconnect
@@ -214,14 +214,14 @@ function NavItems() {
                   height="100%"
                 >
                   <Flex flexDir="column">
-                    <MobileHeaderLink to="/marketplace" onClick={onClose}>
+                    <MobileHeaderLink to="/cryptobutterflies/marketplace" onClick={onClose}>
                       Marketplace
                     </MobileHeaderLink>
-                    <MobileHeaderLink to="/collections" onClick={onClose}>
+                    <MobileHeaderLink to="/cryptobutterflies/collections" onClick={onClose}>
                       Collections
                     </MobileHeaderLink>
                     {system.status === 'WalletConnected' ? (
-                      <MobileHeaderLink to="/create" onClick={onClose}>
+                      <MobileHeaderLink to="/cryptobutterflies/create" onClick={onClose}>
                         New NFT
                       </MobileHeaderLink>
                     ) : null}
@@ -231,7 +231,7 @@ function NavItems() {
                       variant="cancelAction"
                       onClick={async () => {
                         await dispatch(disconnectWallet());
-                        setLocation('/');
+                        setLocation('/cryptobutterflies');
                       }}
                       mb={4}
                     >
@@ -270,7 +270,7 @@ function NavItems() {
           md: 'flex'
         }}
       >
-        <DesktopHeaderLink to="/marketplace">
+        <DesktopHeaderLink to="/cryptobutterflies/marketplace">
           <Box color="brand.turquoise">
             <RiStore2Line size={16} />
           </Box>
@@ -278,13 +278,13 @@ function NavItems() {
         </DesktopHeaderLink>
         {system.status === 'WalletConnected' ? (
           <>
-            <DesktopHeaderLink to="/collections">
+            <DesktopHeaderLink to="/cryptobutterflies/collections">
               <Box color="brand.turquoise">
                 <MdCollections size={16} />
               </Box>
               <Text ml={2}>Collections</Text>
             </DesktopHeaderLink>
-            <DesktopHeaderLink to="/create">
+            <DesktopHeaderLink to="/cryptobutterflies/create">
               <Box color="brand.blue">
                 <Plus size={16} strokeWidth="3" />
               </Box>
@@ -329,7 +329,7 @@ export function Header() {
         src={logo}
         onClick={e => {
           e.preventDefault();
-          setLocation('/marketplace');
+          setLocation('/cryptobutterflies/marketplace');
         }}
         cursor="pointer"
       />
@@ -342,7 +342,7 @@ export function Header() {
         src={headerLogo}
         onClick={e => {
           e.preventDefault();
-          setLocation('/marketplace');
+          setLocation('/cryptobutterflies/marketplace');
         }}
         cursor="pointer"
       />

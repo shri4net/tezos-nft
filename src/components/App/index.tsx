@@ -38,27 +38,27 @@ export default function App() {
       <Flex justifyContent="space-between" width="100%" flexDir="column">
         <Header />
         <Switch>
-          <Route path="/">
+          <Route path="/cryptobutterflies">
             <MarketplaceCatalog />
           </Route>
-          <Route path="/create">
+          <Route path="/cryptobutterflies/create">
             <CreateNonFungiblePage />
           </Route>
-          <Route path="/collections">
+          <Route path="/cryptobutterflies/collections">
             <CollectionsCatalog />
           </Route>
-          <Route path="/marketplace">
+          <Route path="/cryptobutterflies/marketplace">
             <MarketplaceCatalog />
           </Route>
-          <Route path="/creator/:minter">
+          <Route path="/cryptobutterflies/creator/:minter">
             {({ minter }) => <Creator minter={minter} />}
           </Route>
-          <Route path="/collection/:contractAddress">
+          <Route path="/cryptobutterflies/collection/:contractAddress">
             {({ contractAddress }) => (
               <CollectionDisplay address={contractAddress} ownedOnly={false} />
             )}
           </Route>
-          <Route path="/collection/:contractAddress/token/:tokenId">
+          <Route path="/cryptobutterflies/collection/:contractAddress/token/:tokenId">
             {({ contractAddress, tokenId }) => (
               <CollectionsTokenDetail
                 contractAddress={contractAddress}

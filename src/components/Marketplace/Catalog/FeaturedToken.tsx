@@ -48,7 +48,7 @@ export default function FeaturedToken(props: FeaturedTokenProps) {
             w="150px"
             onClick={e => {
               e.preventDefault();
-              setLocation(`/collection/${props.address}/token/${props.id}`, {
+              setLocation(`/cryptobutterflies/collection/${props.address}/token/${props.id}`, {
                 replace: false
               });
             }}
