@@ -10,7 +10,6 @@ import {
   MenuOptionGroup,
   MenuItemOption
 } from '@chakra-ui/react';
-import { CreateCollectionButton } from '../common/modals/CreateCollection';
 import { useSelector, useDispatch } from '../../reducer';
 import { selectCollection } from '../../reducer/slices/createNft';
 import { getWalletAssetContractsQuery } from '../../reducer/async/queries';
@@ -18,6 +17,7 @@ import { ChevronDown } from 'react-feather';
 
 export default function CollectionSelect() {
   const collections = useSelector(s => s.collections.collections);
+  const globalCollection = useSelector(s => s.collections.globalCollection);
   const state = useSelector(s => s.createNft);
   const dispatch = useDispatch();
 
@@ -57,6 +57,7 @@ export default function CollectionSelect() {
             defaultValue={state.collectionAddress || ''}
           >
             {Object.keys(collections).map(address => (
+              (address===globalCollection)?
               <MenuItemOption
                 key={address}
                 value={address}
@@ -65,6 +66,7 @@ export default function CollectionSelect() {
               >
                 {collections[address].metadata.name}
               </MenuItemOption>
+              :""
             ))}
           </MenuOptionGroup>
         </MenuList>

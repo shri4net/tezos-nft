@@ -1,6 +1,5 @@
 import React from 'react';
-import { Flex, Heading } from '@chakra-ui/react';
-import { CreateCollectionButton } from '../../common/modals/CreateCollection';
+import { Heading } from '@chakra-ui/react';
 import { useSelector, useDispatch } from '../../../reducer';
 import {
   selectCollection
@@ -8,7 +7,6 @@ import {
 import CollectionTab from './CollectionTab';
 
 export default function Sidebar() {
-  const tzPublicKey = useSelector(s => s.system.tzPublicKey);
   const state = useSelector(s => s.collections);
   const dispatch = useDispatch();
   return (

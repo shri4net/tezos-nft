@@ -3,12 +3,7 @@ import {
   Box,
   Heading,
   Text,
-  Flex,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel
+  Flex
 } from '@chakra-ui/react';
 import { useSelector } from '../../reducer';
 import { FilePreview } from './FileUpload';
@@ -25,7 +20,6 @@ export default function Confirmation() {
   const selectedFile = useSelector(s => s.createNft.selectedFile);
   const collections = useSelector(s => s.collections.collections);
   const fields = useSelector(s => s.createNft.fields);
-  const attributes = useSelector(s => s.createNft.attributes);
   const collectionAddress = useSelector(s => s.createNft.collectionAddress);
 
   return (

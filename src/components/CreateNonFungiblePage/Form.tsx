@@ -1,25 +1,16 @@
 import React from 'react';
 import {
-  Box,
   Divider,
-  Flex,
   FormControl,
   FormLabel,
-  Heading,
   Input,
   Text,
   Textarea
 } from '@chakra-ui/react';
-import { Plus, X } from 'react-feather';
-import { MinterButton } from '../common';
 
 import { useSelector, useDispatch } from '../../reducer';
 import {
-  addMetadataRow,
-  deleteMetadataRow,
-  updateField,
-  updateMetadataRowName,
-  updateMetadataRowValue
+  updateField
 } from '../../reducer/slices/createNft';
 import CollectionSelect from './CollectionSelect';
 
